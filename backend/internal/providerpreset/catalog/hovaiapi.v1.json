@@ -1,0 +1,9 @@
+{
+  "id": "hovaiapi",
+  "displayName": "HovAIAPI",
+  "baseUrl": "https://enterprise.hovaiapi.com",
+  "catalogProtocol": "openai",
+  "presetVersion": 1,
+  "pinned": true,
+  "models": []
+}

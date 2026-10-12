@@ -1,0 +1,14 @@
+services:
+  backend:
+    image: hovaitv-backend:server
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+      args:
+        GOPROXY: ${GOPROXY:-https://proxy.golang.org,direct}
+
+  web:
+    image: hovaitv-web:server
+    build:
+      context: .
+      dockerfile: Dockerfile

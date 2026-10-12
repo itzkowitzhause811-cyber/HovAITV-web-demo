@@ -1,0 +1,49 @@
+# Changelog
+
+All notable public changes to HovAITV are documented in this file.
+
+## Unreleased
+
+- Built-in HovAIAPI can be connected from the desktop app without pasting a key.
+- Prepared the first audited public source snapshot.
+- Added reproducible local builds, automated quality checks, and multi-architecture container publishing.
+- Standardized public artifacts, runtime identifiers, documentation, and repository links on the HovAITV name.
+
+## v1.5.5
+
+- Desktop update checks and downloads now use the current user's static HTTP/HTTPS system proxy on macOS and Windows when no explicit environment proxy is configured.
+- Keep a manual update check in the sidebar and show a retry action when checking fails, instead of hiding connection failures.
+- Preserve proxy bypass rules, signed manifest verification and package integrity checks throughout redirected downloads.
+
+## v1.5.4
+
+- Generation failures now explain the cause and the next action across canvas nodes, task history and custom channels.
+- Distinguish content moderation, account quota, provider billing, invalid parameters, rate limits, uncertain submissions and failed result downloads without guessing refunds or the offending input.
+- Preserve safe error codes and request identifiers for support, including business errors returned with HTTP 200 and JSON errors inside media downloads.
+- Prevent unsafe unchanged batch retries; edited prompts and reference media can be submitted as new attempts after moderation failures.
+- Cover all 42 currently declared HovAIAPI error codes with a shared frontend and backend regression contract.
+- Improved the shared model picker with a viewport-safe, internally scrollable layout and consistent single-line model options.
+- Removed redundant model icons, secondary descriptions, and stale option backgrounds from model selection UI.
+- Restored native right-click paste behavior in canvas prompt editors and added regression coverage.
+- Added regression coverage for generation output delivery, model picker overflow, and local generation error handling.
+- Added a canonical local app update script to keep one installed HovAITV application instead of accumulating duplicate builds.
+
+## v1.5.3
+
+- Desktop builds show the installed version in the sidebar and check for published updates on startup.
+- Signed updates can be downloaded in the app, then installed with an explicit restart while keeping local projects, assets, settings and connections.
+- Pending canvas, director and timeline saves are checked before restarting; failed downloads or verification leave the current installation intact.
+- Maintainers can build and publish signed macOS and Windows update packages from main. Existing installations need one manual upgrade to this version before in-app updates are available.
+
+## v1.5.2
+
+- Improved canvas node rendering and inline image cropping, annotation, and local redraw interactions.
+- Rebuilt the recycle bin with a fixed two-row viewport, selection, recovery, and confirmed permanent deletion.
+- Fixed project cover selection across media nodes and canvases, including fallbacks and centered empty placeholders.
+- Added a short product demo and updated the README branding.
+
+## v1.5.1
+
+- Initial public HovAITV snapshot.
+- Local-first AI video workspace with image, video, audio, text, asset, canvas, and model-channel workflows.
+- HovAIAPI remains a built-in local channel while its model catalog is discovered dynamically.
